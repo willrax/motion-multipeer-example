@@ -10,4 +10,6 @@ end
 
 Motion::Project::App.setup do |app|
   app.name = "Multipeer Example"
+  app.frameworks += ["MultipeerConnectivity"]
+  app.interface_orientations = [:portrait]
 end
