@@ -1,9 +1,9 @@
 class SessionManager
   attr_accessor :name, :delegate
 
-  def initWithName(name, andDelegate: delgate)
+  def initWithName(name, andDelegate: delegate)
     @name = name
-    @delegate = delagate
+    @delegate = delegate
     advertiser.start
     self
   end
