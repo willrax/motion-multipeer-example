@@ -23,8 +23,10 @@ class RoomViewController < UITableViewController
   end
 
   def receivedMessage(message)
-    @messages << message
-    queue = Dispatch::Queue.main.async { self.tableView.reloadData }
+    Dispatch::Queue.main.async do
+      @messages << message
+      self.tableView.reloadData
+    end
   end
 
   def sendMessage
